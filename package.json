@@ -1,0 +1,18 @@
+{
+  "name": "notify-pr-line-count",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://oss.navercorp.com/SmartStudio/notify-pr-line-count.git",
+  "author": "sungwon <sun.gwon@navercorp.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "axios": "^1.5.1",
+    "minimatch": "^9.0.3"
+  }
+}

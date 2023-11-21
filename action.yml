@@ -1,0 +1,27 @@
+name: 'notify-pr-line-count'
+description: 'Greet someone and record the time'
+inputs:
+  token:
+    description: "GitHub token"
+    required: true
+  slackBotToken:
+    description: "slack bot token for messaging"
+    required: true
+  ext:
+    description: "file extension"
+    required: false
+    default: ".ts, .tsx, .js, .jsx"
+  glob:
+    description: "file glob pattern"
+    required: false
+    default: "!**/node_modules/*"
+  maxChanges:
+    description: "maximum number of changes"
+    required: false
+    default: "300"
+  slackChannelId:
+    description: "slack channel id"
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
