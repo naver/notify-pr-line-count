@@ -1,20 +1,20 @@
 # notify-pr-line-count
 
-🌏 한국어 | [**English**](README.en.md)
+🌏 [**한국어**](README.md) | English
 
-PR 변경 사항이 특정 라인 수를 넘으면 Slack으로 메시지를 보내는 Github Actions
+GitHub Actions to send a Slack message when pr changes exceed a specific line count
 
 ![img1.png](img1.png)
 
 ## Usage
 
-1. 메시지 전달을 위해 `SLACK_BOT_TOKEN` 이름의 secret을 세팅하세요.
+1. Set up a secret named `SLACK_BOT_TOKEN` to send the message.
 
-> 세팅할 Repo > Settings > Secrets > New repository secret
+> Go to the Repo > Settings > Secrets > New repository secret
 
-이때, Value는 슬랙에서 제공하는 `xoxb-` 형태의 토큰이어야 합니다.
+For the value, use a Slack token that starts with `xoxb-`.
 
-2. `.github/workflow/notify-line-count.yml` 파일을 만드세요:
+2. Create a `.github/workflow/notify-line-count.yml` file:
 
 ```yml
 name: notify line count
@@ -42,35 +42,35 @@ jobs:
 
 ### `token`
 
-**Required** GitHub에서 제공하는 토큰
+**Required** GitHub token
 
 ### `slackBotToken`
 
-**Required** Slack bot을 통해 메시지를 보내기 위한 토큰
+**Required** Slack bot token to send messages
 
 e.g. `xoxb-798572638592-435243279588-9aCaWNnzVYelK9NzMMqa1yxz`
 
 ### `slackChannelId`
 
-**Required** 메시지를 받는 Slack 채널 ID
+**Required** Slack channel ID to receive the message
 
 e.g. `channel`
 
 ### `maxChanges`
 
-메시지를 보내는 기준이 되는 변경 라인 수
+Line count threshold for sending a message
 
 default: 300
 
 ### `ext`
 
-검사할 파일 확장자
+File extensions to check
 
 default: ".js, .ts, .jsx, tsx"
 
 ### `glob`
 
-검사할 파일 패턴
+File pattern to check
 
 default: "!**/node_modules/*"
 
