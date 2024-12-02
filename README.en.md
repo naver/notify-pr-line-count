@@ -28,11 +28,11 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: Notify PR LineCount
-        uses: naver/notify-pr-line-count@latest
+        uses: naver/notify-pr-line-count@v1.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           slackBotToken: ${{ secrets.SLACK_BOT_TOKEN }}
-          slackChannelId: "channel"
+          slackChannelId: "AB8C73KNM"
           maxChanges: "300"
           ext: ".js, .ts"
           glob: "packages/**, !**/node_modules/*"
