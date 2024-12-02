@@ -155,7 +155,7 @@ const sendMessage = async ({repoName, title, url, channelId, maxChanges}) => {
 
             const result = await sendMessage({repoName, title, url: prUrl, channelId, maxChanges});
 
-            core.info(`message sent:\n${JSON.stringify(result, null, 2)}`);
+            core.info(`message sent:\n${JSON.stringify(result.data, null, 2)}`);
         }
 
     } catch (error) {
